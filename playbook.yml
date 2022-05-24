@@ -1,7 +1,32 @@
 ---
 - hosts: local
+  vars:
+    brew_sh:
+      - bat
+      - exa
+      - git
+      - python3
+    brew_gui:
+      - 1password
+      - brave-browser
+      - calibre
+      - discord
+      - firefox
+      - goland
+      - google-chrome
+      - iterm2
+      - postman
+      - rectangle
+      - slack
+      - spotify
+      - typora
+      - vlc
+      - visual-studio-code
   tasks:
-    - name: hellobello
-      shell: echo "hello bello"
-      register: hellobello
-    - debug: var=hellobello.stdout
+    - name: Install utils with brew
+      homebrew: name={{ item }} state=present
+      with_items: '{{ brew_sh }}'
+
+    - name: Install GUI apps with brew
+      homebrew_cask: name={{ item }} state=present
+      with_items: '{{ brew_gui }}'
