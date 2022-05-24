@@ -30,3 +30,6 @@
     - name: Install GUI apps with brew
       homebrew_cask: name={{ item }} state=present
       with_items: '{{ brew_gui }}'
+
+    - name: Configure mac system settings
+      script: ./scripts/configure-mac.sh
