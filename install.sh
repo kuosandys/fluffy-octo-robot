@@ -23,3 +23,7 @@ if ! command -v ansible >/dev/null; then
 else
   echo "Ansible is already installed."
 fi
+
+# run ansible playbook
+echo "Running Ansible playbook..."
+ansible-playbook playbook.yml -i inventory
