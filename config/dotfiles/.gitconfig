@@ -1,0 +1,17 @@
+[user]
+  name   = Sandy S Kuo
+  email  = kuo.sandys@gmail.com
+[github]
+  user   = kuosandys
+[alias]
+  a      = add
+  ca     = commit --amend
+  cm     = commit -m
+  s      = status
+  p      = push
+  cob    = checkout -b
+  co     = checkout
+  l      = log --oneline --decorate --graph
+  r      = rebase
+  st     = stash
+  stp    = stash pop
