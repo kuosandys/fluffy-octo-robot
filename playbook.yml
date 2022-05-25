@@ -32,3 +32,8 @@
 
     - name: Configure mac system settings
       script: ./scripts/configure-mac.sh
+
+    - name: Copy font files
+      copy:
+        src: ./config/fonts/
+        dest: ~/Library/Fonts/
