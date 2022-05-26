@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # ensure Apple CLI tools are installed
 if ! command -v xcode-select >/dev/null; then
