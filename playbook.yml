@@ -15,6 +15,7 @@
       - firefox
       - goland
       - iterm2
+      - logitech-options
       - postman
       - rectangle
       - slack
@@ -26,6 +27,9 @@
     - name: Install utils with brew
       homebrew: name={{ item }} state=present
       with_items: '{{ brew_sh }}'
+
+    - name: Tap homebrew casks of drivers
+      homebrew_tap: homebrew/cask-drivers
 
     - name: Install GUI apps with brew
       homebrew_cask: name={{ item }} state=present
