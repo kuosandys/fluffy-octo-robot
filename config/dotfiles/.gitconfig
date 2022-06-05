@@ -5,6 +5,7 @@
   user   = kuosandys
 [alias]
   a      = add
+  aa     = add .
   ca     = commit --amend
   cm     = commit -m
   s      = status
