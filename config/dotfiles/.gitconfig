@@ -16,3 +16,5 @@
   r      = rebase
   st     = stash
   stp    = stash pop
+[init]
+	defaultBranch = main
