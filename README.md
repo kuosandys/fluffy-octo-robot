@@ -21,9 +21,33 @@ Some configurations for preferences are also made - e.g. key repeat speed, scrol
 
 ## What remains to be done?
 
-- GitHub SSH
-- configuring each app with the appropriate licenses and accounts
-- pinning the desired applications in Dock
-- configuring other settings for mac (e.g. language settings, keyboard settings, spotlight settings.. these are easier done from System Preferences than from `defaults`)
-- configuring keyboard shortcuts for iTerm2
-- choosing a desktop background
+- [ ] GitHub SSH
+- [ ] Configure each app with the appropriate licenses and accounts
+  - [ ] Goland
+  - [ ] Typora
+- [ ] Sign in to accounts
+  - [ ] VSCode
+  - [ ] Mail
+- [ ] Pin the desired applications in Dock
+- [ ] Configure other settings for mac
+  - [ ] Reorder control strip
+  - [ ] Add language keyboards
+  - [ ] Remove everything from Spotlight settings except for Applications and System Preferences
+- [ ] Customize Brave
+  - [ ] preferences
+  - [ ] extensions
+    - [ ] raindrop.io
+    - [ ] 1Password
+    - [ ] dark reader
+- [ ] Customize Finder
+  - [ ] Add home directory to sidebar
+  - [ ] Remove tags from sidebar
+- [ ] Customize iTerm2
+  - [ ] Change cursor to vertical bar
+  - [ ] Change font to MesloLGS NF, font size to 13
+  - [ ] Configure keyboard shortcuts for iTerm2
+    - [ ] Keys: set left Option key to act as Esc+
+    - [ ] Key mappings:
+      - [ ] Option + <- to Send escape sequence b
+      - [ ] Option + -> to Send escape sequence f
+- Choose a desktop background
