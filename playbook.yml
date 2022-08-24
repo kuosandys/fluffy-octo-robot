@@ -10,13 +10,14 @@
       - yarn
     brew_gui:
       - 1password
-      - brave-browser
       - calibre
       - discord
+      - figma
       - firefox
       - goland
       - iterm2
       - logitech-options
+      - microsoft-edge
       - postman
       - rectangle
       - slack
