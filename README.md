@@ -39,6 +39,7 @@ Some configurations for preferences are also made - e.g. key repeat speed, scrol
     - [ ] raindrop.io
     - [ ] 1Password
     - [ ] dark reader
+    - [ ] uBlock Origin
 - [ ] Customize Finder
   - [ ] Add home directory to sidebar
   - [ ] Remove tags from sidebar
