@@ -33,6 +33,7 @@ Some configurations for preferences are also made - e.g. key repeat speed, scrol
   - [ ] Reorder control strip
   - [ ] Add language keyboards
   - [ ] Remove everything from Spotlight settings except for Applications and System Preferences
+- [ ] Install Logitech Options+
 - [ ] Customize browsers
   - [ ] preferences
   - [ ] extensions
