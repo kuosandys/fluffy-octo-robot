@@ -18,3 +18,5 @@
   stp    = stash pop
 [init]
 	defaultBranch = main
+[push]
+	autoSetupRemote = true
