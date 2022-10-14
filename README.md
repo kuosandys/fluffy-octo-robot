@@ -52,4 +52,5 @@ Some configurations for preferences are also made - e.g. key repeat speed, scrol
     - [ ] Key mappings:
       - [ ] Option + <- to Send escape sequence b
       - [ ] Option + -> to Send escape sequence f
+  - [ ] Set working directory for profile to reuse previous session's directory
 - Choose a desktop background
