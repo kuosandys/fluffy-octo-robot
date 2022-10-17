@@ -3,19 +3,6 @@
   email  = 62935115+kuosandys@users.noreply.github.com
 [github]
   user   = kuosandys
-[alias]
-  a      = add
-  aa     = add .
-  ca     = commit --amend
-  cm     = commit -m
-  s      = status
-  p      = push
-  cob    = checkout -b
-  co     = checkout
-  l      = log --oneline --decorate --graph
-  r      = rebase
-  st     = stash
-  stp    = stash pop
 [init]
 	defaultBranch = main
 [push]
