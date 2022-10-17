@@ -13,7 +13,7 @@
       - calibre
       - discord
       - figma
-      - firefox
+      - firefox-developer-edition
       - goland
       - iterm2
       - postman
@@ -30,6 +30,9 @@
 
     - name: Tap homebrew casks of drivers
       homebrew_tap: homebrew/cask-drivers
+
+    - name: Tap homebrew casks of alternate versions
+      homebrew_tap: homebrew/cask-versions
 
     - name: Install GUI apps with brew
       homebrew_cask: name={{ item }} state=present
