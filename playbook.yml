@@ -89,3 +89,7 @@
         gvm install go1.18
         gvm use go1.18 --default
         brew uninstall go
+
+    - name: Install rustup
+      shell: |
+        curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
