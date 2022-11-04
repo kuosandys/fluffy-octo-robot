@@ -26,4 +26,4 @@ fi
 
 # run ansible playbook
 echo "Running Ansible playbook..."
-ansible-playbook playbook.yml -i inventory
+ansible-playbook playbook.yml -i inventory --extra-vars "configure_mac=${CONFIGURE_MAC:-false}"
