@@ -6,6 +6,7 @@
       - exa
       - git
       - go # this is removed in the gvm installation task
+      - pyenv
       - python3
       - yarn
     brew_gui:
@@ -16,10 +17,10 @@
       - firefox-developer-edition
       - goland
       - iterm2
+      - musescore
       - obsidian
       - postman
       - rectangle
-      - rocket
       - slack
       - spotify
       - typora
