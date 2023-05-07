@@ -66,8 +66,8 @@ prompt pure
 
 fpath+=$HOME/.zsh/pure
 
-zstyle ':prompt:pure:path' color 117
-zstyle ':prompt:pure:prompt:success' color 135
+zstyle ':prompt:pure:path' color blue
+zstyle ':prompt:pure:prompt:success' color magenta
 zstyle ':prompt:pure:git:branch' color 245
 
 # User configuration
@@ -95,5 +95,7 @@ zstyle ':prompt:pure:git:branch' color 245
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ls="exa -la"
+alias ls="exa -1a --group-directories-first"
 alias cat="bat"
+
+export BAT_THEME="Visual Studio Dark+"

@@ -65,7 +65,7 @@ echo "  done."
 mackup restore
 
 # Configure mac defaults
-# if [[ "$1" == "mac" ]]; then
-#   echo "=== Confguring mac defaults"
-#   source dotfiles/.macos
-# fi
+if [[ "$1" == "mac" ]]; then
+  echo "=== Confguring mac defaults"
+  source dotfiles/.macos
+fi
