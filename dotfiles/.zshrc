@@ -66,9 +66,7 @@ prompt pure
 
 fpath+=$HOME/.zsh/pure
 
-zstyle ':prompt:pure:path' color blue
-zstyle ':prompt:pure:prompt:success' color magenta
-zstyle ':prompt:pure:git:branch' color 245
+zstyle ':prompt:pure:git:branch' color gray
 
 # User configuration
 
