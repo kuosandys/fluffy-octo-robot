@@ -61,6 +61,15 @@ echo "=== Installing brew packages..."
 brew bundle --file ./dotfiles/Brewfile --no-lock
 echo "  done."
 
+# Install gvm
+brew install go # uninstall after gvm is installed
+zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+source "/Users/kuosandys/.gvm/scripts/gvm"
+gvm install go1.17.6
+gvm use go1.17.6 --default
+brew uninstall go
+gvm install go1.18
+
 # Load app configs from mackup
 mackup restore
 

@@ -99,3 +99,5 @@ alias ls="exa -1a --group-directories-first"
 alias cat="bat"
 
 export BAT_THEME="Visual Studio Dark+"
+
+[[ -s "/Users/kuosandys/.gvm/scripts/gvm" ]] && source "/Users/kuosandys/.gvm/scripts/gvm"
