@@ -68,7 +68,6 @@ source "/Users/kuosandys/.gvm/scripts/gvm"
 gvm install go1.17.6
 gvm use go1.17.6 --default
 brew uninstall go
-gvm install go1.18
 
 # Load app configs from mackup
 mackup restore
