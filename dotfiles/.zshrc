@@ -98,4 +98,4 @@ alias cat="bat"
 
 export BAT_THEME="Visual Studio Dark+"
 
-[[ -s "/Users/kuosandys/.gvm/scripts/gvm" ]] && source "/Users/kuosandys/.gvm/scripts/gvm"
+[[ -s "~/.gvm/scripts/gvm" ]] && source "~/.gvm/scripts/gvm"

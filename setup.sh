@@ -64,7 +64,7 @@ echo "  done."
 # Install gvm
 brew install go # uninstall after gvm is installed
 zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
-source "/Users/kuosandys/.gvm/scripts/gvm"
+source "~/.gvm/scripts/gvm"
 gvm install go1.17.6
 gvm use go1.17.6 --default
 brew uninstall go
