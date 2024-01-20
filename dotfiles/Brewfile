@@ -17,6 +17,7 @@ brew "yarn"
 
 # brew cask
 cask "1password"
+cask "brave-browser"
 cask "calibre"
 cask "discord"
 cask "figma"
@@ -32,3 +33,4 @@ cask "slack"
 cask "spotify"
 cask "vlc"
 cask "visual-studio-code"
+cask "warp"
