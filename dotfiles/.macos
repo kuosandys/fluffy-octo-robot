@@ -60,7 +60,7 @@ defaults write NSGlobalDomain AppleTemperatureUnit "Celsius"
 sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
 
 # Time
-sudo systemsetup -settimezone "Europe/Budapest" > /dev/null
+sudo systemsetup -settimezone "Europe/Berlin" > /dev/null
 defaults write NSGlobalDomain AppleICUForce24HourTime -bool true
 
 # Power
