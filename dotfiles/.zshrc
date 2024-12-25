@@ -93,8 +93,8 @@ zstyle ':prompt:pure:git:branch' color gray
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ls="exa -1a --group-directories-first"
 alias cat="bat"
+alias ls="gls -la --group-directories-first --color"
 
 export BAT_THEME="Visual Studio Dark+"
 
