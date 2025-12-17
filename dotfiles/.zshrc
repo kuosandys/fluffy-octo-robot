@@ -99,5 +99,3 @@ alias ls="gls -la --group-directories-first --color"
 export BAT_THEME="Visual Studio Dark+"
 
 [[ -s "/Users/kuosandys/.gvm/scripts/gvm" ]] && source "/Users/kuosandys/.gvm/scripts/gvm"
-
-export XDG_CONFIG_HOME=~/.config/ghostty/config
