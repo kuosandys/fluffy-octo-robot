@@ -40,26 +40,30 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
 
+# Install brew packages
+echo "=== Installing brew packages..."
+brew bundle --file ./dotfiles/Brewfile --no-lock
+echo "  done."
+
 # Symlink dotfiles
 FILES=(".zshrc" ".vimrc" ".mackup.cfg")
 DOTFILES=~/fluffy-octo-robot/dotfiles
-OLD_DOTFILES=~/dotfiles_old
+OLD_DOTFILES_DIR=~/dotfiles_old
 
-echo "=== Backing up old dotfiles and creating symlinks for new ones"
+echo "=== Backing up old dotfiles..."
 
 mkdir $OLD_DOTFILES
 
 for file in $FILES; do
   echo "    $file... "
-  mv ~/$file $OLD_DOTFILES/
-  ln -s $DOTFILES/$file ~/$file
+  mv ~/$file $OLD_DOTFILES_DIR/
   echo "    done."
 done
 
-# Install brew packages
-echo "=== Installing brew packages..."
-brew bundle --file ./dotfiles/Brewfile --no-lock
-echo "  done."
+echo "=== Symlinking dotfiles..."
+cd $DOTFILES
+stow -v -t "$HOME" .
+cd
 
 # Install gvm
 brew install go # uninstall after gvm is installed
@@ -69,11 +73,5 @@ gvm install go1.17.6
 gvm use go1.17.6 --default
 brew uninstall go
 
-# Load app configs from mackup
-mackup restore
-
-# Configure mac defaults
-if [[ "$1" == "mac" ]]; then
-  echo "=== Confguring mac defaults"
-  source dotfiles/.macos
-fi
+echo "=== Configuring mac defaults"
+source $DOTFILES/.macos
