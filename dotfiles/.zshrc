@@ -1,101 +1,32 @@
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
 
-ZSH_THEME=""
+zinit snippet OMZL::git.zsh
+zinit snippet OMZL::directories.zsh
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+zinit snippet OMZP::git
+zinit snippet OMZP::brew
 
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+# Load order matters: autosuggestions and fzf-tab before syntax-highlighting,
+# since zsh-syntax-highlighting must be loaded last to wrap all widgets correctly.
+zinit light zsh-users/zsh-autosuggestions
+zinit light Aloxaf/fzf-tab
+zinit light zsh-users/zsh-syntax-highlighting
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+autoload -Uz compinit
+compinit
 
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
-# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-nvm)
-
-source $ZSH/oh-my-zsh.sh
-# Pure theme overrides prompt - must be after the line above
-autoload -U promptinit; promptinit
-prompt pure
-
-fpath+=$HOME/.zsh/pure
-
-zstyle ':prompt:pure:git:branch' color gray
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cat="bat"
-alias ls="gls -la --group-directories-first --color"
+alias ls="eza -la --group-directories-first --icons --git"
 
 export BAT_THEME="Visual Studio Dark+"
 
-[[ -s "/Users/kuosandys/.gvm/scripts/gvm" ]] && source "/Users/kuosandys/.gvm/scripts/gvm"
+# fnm
+eval "$(fnm env --use-on-cd)"
+
+# atuin
+if command -v atuin >/dev/null 2>&1; then
+  eval "$(atuin init zsh)"
+fi

@@ -1,0 +1,8 @@
+# Atuin configuration (Offline / Local Machine Scoped)
+
+auto_sync = false
+update_check = false
+sync_frequency = "0"
+search_mode = "fuzzy"
+filter_mode = "global"
+style = "compact"

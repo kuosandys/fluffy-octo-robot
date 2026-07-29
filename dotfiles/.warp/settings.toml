@@ -1,0 +1,7 @@
+# Warp Settings
+
+[appearance.text]
+font_size = 13.0
+
+[appearance.themes]
+theme = "Catppuccin Mocha"
